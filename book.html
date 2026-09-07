@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Visit — Steady Ground Coffee Service and Skilling</title>
+<meta name="description" content="Request a service call or a skilling session with Steady Ground Coffee Service and Skilling, Blacksburg, Virginia.">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="icon" href="assets/img/favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/img/favicon-192.png">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<header class="sg-header">
+  <div class="sg-header__inner">
+    <a href="index.html" class="sg-header__logo"><img src="assets/img/logo-horizontal.png" alt="Steady Ground Coffee Service and Skilling" height="34"></a>
+    <button class="sg-header__menu-btn" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="sg-icon" style="width:22px;height:22px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/menu.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/menu.svg)"></span>
+    </button>
+    <nav class="sg-header__nav" id="siteNav">
+      <a href="services.html" class="sg-header__link">Service</a>
+      <a href="skilling.html" class="sg-header__link">Skilling</a>
+      <a href="coverage.html" class="sg-header__link">Coverage / About</a>
+    </nav>
+    <div class="sg-header__actions">
+      <a href="tel:+12069929405" class="sg-header__phone">
+        <span class="sg-icon" style="width:14px;height:14px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/phone.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/phone.svg)"></span>
+        <span>(206) 992-9405</span>
+      </a>
+      <a href="book.html" class="sg-btn sg-btn--accent sg-btn--sm">Book a visit</a>
+    </div>
+  </div>
+</header>
+
+<section class="sg-section sg-section--tight sg-section--divider">
+  <div class="sg-section__inner">
+    <div class="sg-eyebrow" style="margin-bottom:var(--space-4)">Book a visit</div>
+    <h1 class="sg-h1 sg-h1--page">Bring Steady Ground to your home or business</h1>
+  </div>
+</section>
+
+<section class="sg-section sg-section--tight">
+  <div class="sg-section__inner">
+    <form id="bookForm" style="max-width:720px;display:flex;flex-direction:column;gap:var(--space-5)">
+      <input type="hidden" id="bookKind" name="kind" value="service">
+
+      <div>
+        <div class="sg-group-label">What do you need?</div>
+        <div class="sg-tabs" role="tablist">
+          <button type="button" class="sg-tab is-active" role="tab" aria-selected="true" data-kind="service">Service call</button>
+          <button type="button" class="sg-tab" role="tab" aria-selected="false" data-kind="skilling">Skilling session</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="sg-group-label">Name</div>
+        <div class="sg-grid-2" style="gap:var(--space-4)">
+          <div class="sg-field">
+            <label class="sg-field__label" for="firstName">First name <span class="req">(required)</span></label>
+            <div class="sg-input-wrap"><input class="sg-input" id="firstName" name="firstName" placeholder="Alex" required></div>
+          </div>
+          <div class="sg-field">
+            <label class="sg-field__label" for="lastName">Last name <span class="req">(required)</span></label>
+            <div class="sg-input-wrap"><input class="sg-input" id="lastName" name="lastName" placeholder="Rivera" required></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg-grid-2" style="gap:var(--space-4)">
+        <div class="sg-field">
+          <label class="sg-field__label" for="email">Email <span class="req">(required)</span></label>
+          <div class="sg-input-wrap">
+            <span class="sg-icon" style="width:16px;height:16px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/mail.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/mail.svg)"></span>
+            <input class="sg-input sg-input--icon" type="email" id="email" name="email" placeholder="you@shop.com" required>
+          </div>
+        </div>
+        <div class="sg-field">
+          <label class="sg-field__label" for="phone">Phone <span class="req">(required)</span></label>
+          <div class="sg-input-wrap">
+            <span class="sg-icon" style="width:16px;height:16px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/phone.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/phone.svg)"></span>
+            <input class="sg-input sg-input--icon" type="tel" id="phone" name="phone" placeholder="(540) 555-0100" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg-field">
+        <label class="sg-field__label" for="equipment">Make &amp; model of your equipment</label>
+        <div class="sg-input-wrap"><input class="sg-input" id="equipment" name="equipment" placeholder="La Marzocco Linea Classic S"></div>
+        <span class="sg-field__hint">If you know it</span>
+      </div>
+
+      <div id="panel-service">
+        <div class="sg-group-label">Service type <span class="req">(required)</span></div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <label class="sg-radio">
+            <input class="sg-radio__input" type="radio" name="serviceType" value="field" checked data-required>
+            <span class="sg-radio__dot"></span>
+            <span><span class="sg-radio__label">Field Service and Repair</span><span class="sg-radio__desc">Commercial equipment and select Residential machines only</span></span>
+          </label>
+          <label class="sg-radio">
+            <input class="sg-radio__input" type="radio" name="serviceType" value="build" data-required>
+            <span class="sg-radio__dot"></span>
+            <span><span class="sg-radio__label">New Build-outs and Installs</span><span class="sg-radio__desc">Consultation</span></span>
+          </label>
+        </div>
+        <div class="sg-field" style="margin-top:var(--space-5)">
+          <label class="sg-field__label" for="serviceDetails">What's happening? <span class="req">(required)</span></label>
+          <textarea class="sg-textarea" id="serviceDetails" name="serviceDetails" rows="4" placeholder="No pressure on group 2 since Tuesday. Group 1 fine." data-required required></textarea>
+          <span class="sg-field__hint">Sounds, pressures, when it started — the more detail, the faster the fix</span>
+        </div>
+      </div>
+
+      <div id="panel-skilling" style="display:none">
+        <div class="sg-group-label">Which package? <span class="req">(required)</span></div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <label class="sg-radio">
+            <input class="sg-radio__input" type="radio" name="package" value="p1" checked data-required>
+            <span class="sg-radio__dot"></span>
+            <span><span class="sg-radio__label">Standard Session — $130 + travel</span><span class="sg-radio__desc">90 minutes, 1–2 people</span></span>
+          </label>
+          <label class="sg-radio">
+            <input class="sg-radio__input" type="radio" name="package" value="p2" data-required>
+            <span class="sg-radio__dot"></span>
+            <span><span class="sg-radio__label">Extended Session — $200 + travel</span><span class="sg-radio__desc">2 hours, 3–6 people</span></span>
+          </label>
+        </div>
+        <div class="sg-field" style="margin-top:var(--space-5)">
+          <label class="sg-field__label" for="skillingDetails">What should the session cover? <span class="req">(required)</span></label>
+          <textarea class="sg-textarea" id="skillingDetails" name="skillingDetails" rows="4" placeholder="Two new hires, and our shots run long after the roast changed." data-required></textarea>
+          <span class="sg-field__hint">Dial-in, milk, maintenance — tell us where we can help</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:var(--space-3);margin-top:var(--space-2);flex-wrap:wrap">
+        <button type="submit" class="sg-btn sg-btn--accent sg-btn--lg">
+          <span class="sg-icon" style="width:18px;height:18px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/calendar-check.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/calendar-check.svg)"></span>
+          Request this visit
+        </button>
+        <a href="index.html" class="sg-btn sg-btn--ghost sg-btn--lg">Cancel</a>
+      </div>
+      <p style="font-size:var(--size-caption);color:var(--text-subtle);margin:0">Submitting opens your email app with this request pre-filled to alex@steadyground.co — just hit send from there.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="sg-footer">
+  <div class="sg-footer__inner">
+    <div class="sg-footer__grid">
+      <div><img class="sg-footer__logo" src="assets/img/logo-stacked-tag-white.png" alt="Steady Ground Coffee Service and Skilling" style="height:112px;width:auto;display:block"></div>
+      <div>
+        <div class="sg-eyebrow sg-footer__title">Contact</div>
+        <div class="sg-footer__lines">
+          <span>717 Lee St, Apt 4</span>
+          <span>Blacksburg, VA 24060</span>
+          <span><a href="mailto:alex@steadyground.co">alex@steadyground.co</a></span>
+          <span class="sg-footer__mono"><a href="tel:+12069929405">(206) 992-9405</a></span>
+        </div>
+      </div>
+      <div>
+        <div class="sg-eyebrow sg-footer__title">Hours of operation</div>
+        <div class="sg-footer__lines">
+          <span>By appointment only</span>
+          <span>Monday – Friday</span>
+          <span class="sg-footer__mono">9am – 5pm</span>
+        </div>
+      </div>
+    </div>
+    <div class="sg-footer__meta">
+      <span>© 2026 Steady Ground Coffee Service and Skilling</span>
+      <span>Mobile coffee tech service · New River Valley &amp; Southwest Virginia</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sg-toast" id="sgToast">
+  <span class="sg-toast__icon sg-icon" style="width:18px;height:18px;background-color:#4FB0F0;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/circle-check.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/circle-check.svg)"></span>
+  <div style="flex:1">
+    <div class="sg-toast__message"></div>
+    <div class="sg-toast__detail"></div>
+  </div>
+  <button class="sg-toast__close" aria-label="Dismiss">✕</button>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

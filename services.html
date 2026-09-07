@@ -1,146 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Steady Ground Coffee Service and Skilling</title>
-<meta name="description" content="Field repairs, routine maintenance, new installation consultations, and hands-on skilling sessions for coffee and espresso equipment in Southwest Virginia.">
-<link rel="icon" type="image/png" href="assets/img/favicon-32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="assets/img/favicon-192.png" sizes="192x192">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Service &amp; Rates — Steady Ground Coffee Service and Skilling</title>
+<meta name="description" content="Diagnostics, repair, maintenance, installation and water treatment for espresso equipment. $100/hr labor, one-hour minimum, travel billed from Blacksburg, VA.">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+<link rel="icon" href="assets/img/favicon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/img/favicon-192.png">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 
-<a class="visually-hidden" href="#main">Skip to main content</a>
-
-<header class="site-header">
-  <div class="container">
-    <a class="brand" href="index.html" aria-label="Steady Ground home">
-      <img src="assets/img/Logo_web.png" alt="Steady Ground Coffee Service and Skilling">
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
-      <span></span><span></span><span></span>
+<header class="sg-header">
+  <div class="sg-header__inner">
+    <a href="index.html" class="sg-header__logo"><img src="assets/img/logo-horizontal.png" alt="Steady Ground Coffee Service and Skilling" height="34"></a>
+    <button class="sg-header__menu-btn" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="sg-icon" style="width:22px;height:22px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/menu.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/menu.svg)"></span>
     </button>
-    <nav class="main-nav" id="primary-nav" aria-label="Primary">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" aria-current="page">Services</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a class="nav-cta" href="index.html#contact">Contact Us</a></li>
-      </ul>
+    <nav class="sg-header__nav" id="siteNav">
+      <a href="services.html" class="sg-header__link is-active">Service</a>
+      <a href="skilling.html" class="sg-header__link">Skilling</a>
+      <a href="coverage.html" class="sg-header__link">Coverage / About</a>
     </nav>
+    <div class="sg-header__actions">
+      <a href="tel:+12069929405" class="sg-header__phone">
+        <span class="sg-icon" style="width:14px;height:14px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/phone.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/phone.svg)"></span>
+        <span>(206) 992-9405</span>
+      </a>
+      <a href="book.html" class="sg-btn sg-btn--accent sg-btn--sm">Book a visit</a>
+    </div>
   </div>
 </header>
 
-<main id="main">
+<section class="sg-section sg-section--tight sg-section--divider">
+  <div class="sg-section__inner">
+    <div class="sg-eyebrow" style="margin-bottom:var(--space-4)">Service &amp; rates</div>
+    <h1 class="sg-h1 sg-h1--page">Diagnose. Maintain. Install. Repair.</h1>
+    <p class="sg-lede" style="max-width:56ch">We work on the machine where it lives: behind the bar or on your counter. One labor rate covers all of it, plus travel from Blacksburg. Parts are quoted before they're ordered.</p>
+  </div>
+</section>
 
-  <section class="page-header">
-    <div class="container">
-      <h1>Four ways we keep your coffee running smoothly</h1>
-      <p>Whatever's going on with your machine — broken, overdue for a check-up, brand new, or just confusing — there's a straightforward way we can help.</p>
-    </div>
-  </section>
+<section class="sg-section sg-section--tight">
+  <div class="sg-section__inner">
+    <div class="sg-grid-3">
 
-  <section class="section section-bg-white">
-    <div class="container">
-
-      <div class="service-detail" id="field-service">
-        <span class="ico"><svg class="icon" viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#000000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="26" r="14"/><line x1="24" y1="26" x2="31" y2="18"/><circle cx="24" cy="26" r="2.2" fill="#000000" stroke="none"/><path d="M15 12 12 9M33 12l3-3M9 26H5M43 26h-4"/></svg></span>
-        <div>
-          <span class="tagline">Something's wrong &amp; you need it fixed</span>
-          <h2>Field Service &amp; Repairs</h2>
-          <p>Leaking, sputtering, suddenly silent, or just not tasting right — a struggling machine usually means one specific part needs attention, not a whole new machine. We come to your home or business, figure out exactly what's going on, and explain it in plain terms before we do anything.</p>
-          <ul>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>On-site diagnosis, so you're not without your machine for weeks</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Most repairs completed the same visit</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>A clear, honest explanation of what broke and why</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Covers home and commercial espresso machines &amp; grinders</li>
-          </ul>
-        </div>
+      <div class="sg-card">
+        <span class="sg-icon sg-card__icon" style="width:26px;height:26px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/gauge.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/gauge.svg)"></span>
+        <h3 class="sg-card__title">Diagnostics</h3>
+        <p class="sg-card__body">Pressure, flow, temperature stability, and electrical and hydraulic pathways. You get the readings, not just an opinion.</p>
       </div>
 
-      <div class="service-detail" id="maintenance">
-        <span class="ico"><svg class="icon" viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#000000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M38 24a14 14 0 1 1-4-9.8"/><path d="M38 8v8h-8"/></svg></span>
-        <div>
-          <span class="tagline">Keeping small problems small</span>
-          <h2>Routine Maintenance</h2>
-          <p>Most breakdowns don't happen out of nowhere — they build up slowly through mineral scale, worn gaskets, and gunked-up grinder burrs. A regular visit catches all of that early, keeps your coffee tasting the way it's supposed to, and is a lot cheaper than an emergency repair.</p>
-          <ul>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Descaling, gasket checks, and group head cleaning</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Grinder burr inspection &amp; calibration</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Flexible schedules — monthly, quarterly, or seasonal</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>A simple written summary after every visit</li>
-          </ul>
-        </div>
+      <div class="sg-card">
+        <span class="sg-icon sg-card__icon" style="width:26px;height:26px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/wrench.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/wrench.svg)"></span>
+        <h3 class="sg-card__title">Repair</h3>
+        <p class="sg-card__body">Group calibrations and rebuilds, screen and gasket replacements, boilers, pumps, valves, grinder burrs, controllers. Common parts ride on the van.</p>
       </div>
 
-      <div class="service-detail" id="installation">
-        <span class="ico"><svg class="icon" viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#000000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="10" width="20" height="28" rx="2"/><path d="M19 10V8a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><path d="M18 24l4 4 8-9"/></svg></span>
-        <div>
-          <span class="tagline">Bringing in something new</span>
-          <h2>New Installation Consultation</h2>
-          <p>Buying new equipment is exciting, and a little overwhelming — there are a lot of machines out there, and not all of them fit your space, your water, or your budget. We'll walk through your options with you, then handle the plumbing, electrical, and setup so it's ready to pull a great shot from day one.</p>
-          <ul>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Honest advice on equipment that fits your needs, not just the priciest option</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Site visits to check water, power, and space before you buy</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Full setup, water filtration, and first-run calibration</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>A walkthrough so your team or household knows how to use it</li>
-          </ul>
-        </div>
+      <div class="sg-card">
+        <span class="sg-icon sg-card__icon" style="width:26px;height:26px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/calendar-check.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/calendar-check.svg)"></span>
+        <h3 class="sg-card__title">Maintenance</h3>
+        <p class="sg-card__body">Extend the life of your equipment with inspection and replacement of wear and tear components on an service schedule that suits how hard you run the machine.</p>
       </div>
 
-      <div class="service-detail" id="skilling">
-        <span class="ico"><svg class="icon" viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#000000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 20h18v8a9 9 0 0 1-9 9 9 9 0 0 1-9-9v-8Z"/><path d="M31 22h3a4 4 0 0 1 0 8h-3"/><path d="M18 16c0-2 2-2 2-4s-2-2-2-4M25 16c0-2 2-2 2-4s-2-2-2-4"/></svg></span>
-        <div>
-          <span class="tagline">Get hands-on and learn</span>
-          <h2>Skilling Sessions</h2>
-          <p>Booked by the hour, right in your own kitchen or shop, a skilling session is a private coffee lab just for you. Bring your questions, your machine, and your curiosity — we'll dial things in together and you'll walk away actually understanding your setup, not just following steps someone wrote down for you.</p>
-          <ul>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>One-on-one time, paced around your questions</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Great for beginners and longtime home baristas alike</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Dial in grind, dose, and technique on your own machine</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6FC2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Available for homes and business teams alike</li>
-          </ul>
-        </div>
+      <div class="sg-card">
+        <span class="sg-icon sg-card__icon" style="width:26px;height:26px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/truck.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/truck.svg)"></span>
+        <h3 class="sg-card__title">Installation</h3>
+        <p class="sg-card__body">Site survey, plumbing and electrical coordination, setup and dial-in.</p>
       </div>
 
-    </div>
-  </section>
+      <div class="sg-card">
+        <span class="sg-icon sg-card__icon" style="width:26px;height:26px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/droplets.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/droplets.svg)"></span>
+        <h3 class="sg-card__title">Water treatment</h3>
+        <p class="sg-card__body">Hardness and TDS testing plus filtration solutions optimized for machine longevity and coffee quality.</p>
+      </div>
 
-  <section class="section section-bg-blue final-cta">
-    <div class="container">
-      <h2>Not sure which one you need?</h2>
-      <p>That's alright — most people aren't. Tell us what's going on and we'll point you in the right direction.</p>
-      <a class="btn btn-on-blue" href="index.html#contact">Get In Touch</a>
-    </div>
-  </section>
+      <div class="sg-card">
+        <span class="sg-icon sg-card__icon" style="width:26px;height:26px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/coffee.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/coffee.svg)"></span>
+        <h3 class="sg-card__title">Home equipment</h3>
+        <p class="sg-card__body">We fix prosumer espresso machines and grinders produced and supported by reputable specialty coffee brands.</p>
+      </div>
 
-</main>
-
-<footer class="site-footer" id="contact">
-  <div class="container footer-top">
-    <div class="footer-col-left">
-      <img src="assets/img/Logomark_white_web.png" alt="Steady Ground">
-    </div>
-    <div class="footer-col-center">
-      <h3>Hours of Operation</h3>
-      <p>By Appointment Only<br>Monday&nbsp;&ndash;&nbsp;Friday, 9AM&nbsp;&ndash;&nbsp;5PM</p>
-    </div>
-    <div class="footer-col-right">
-      <h3>Contact</h3>
-      <p>
-        Steady Ground Coffee Service and Skilling LLC<br>
-        717 Lee St Apt 4<br>
-        Blacksburg, VA&nbsp;24060<br>
-        <a href="mailto:alex@steadyground.co">alex@steadyground.co</a><br>
-        <a href="tel:+12069929405">(206) 992-9405</a>
-      </p>
     </div>
   </div>
-  <div class="container footer-bottom">
-    <span>&copy; 2026 Steady Ground Coffee Service and Skilling LLC. All rights reserved.</span>
-    <span><a href="index.html">steadyground.co</a></span>
+</section>
+
+<section class="sg-section sg-section--warm sg-section--tight">
+  <div class="sg-section__inner">
+    <div class="sg-grid-2">
+      <div>
+        <div class="sg-eyebrow">Labor Rate</div>
+        <div class="sg-price" style="margin:var(--space-5) 0 var(--space-2)">
+          <span class="sg-price__num sg-price__num--lg">$100</span>
+          <span class="sg-price__unit">per hour + travel</span>
+        </div>
+        <p style="font-size:var(--size-body);color:var(--text-muted);max-width:40ch">Diagnostic, maintenance, install and repair all bill at the same rate. One-hour minimum on every dispatched service call. Travel fees are charged anytime a coffee technician is dispatched to your location for service work.</p>
+      </div>
+      <div class="sg-card sg-card--pad-0">
+        <div class="sg-table__head" style="grid-template-columns:1.3fr 1fr 170px;border-top-left-radius:var(--radius-md);border-top-right-radius:var(--radius-md)">
+          <span>Charge</span><span>Applies to</span><span>Rate</span>
+        </div>
+        <div class="sg-table__row" style="grid-template-columns:1.3fr 1fr 170px;border-top:none">
+          <span class="sg-table__label">Labor</span><span class="sg-table__detail">All dispatched service work</span><span class="sg-table__price">$100 / hr</span>
+        </div>
+        <div class="sg-table__row" style="grid-template-columns:1.3fr 1fr 170px">
+          <span class="sg-table__label">Minimum</span><span class="sg-table__detail">Every dispatched call</span><span class="sg-table__price">1 hour</span>
+        </div>
+        <div class="sg-table__row" style="grid-template-columns:1.3fr 1fr 170px">
+          <span class="sg-table__label">Travel — local</span><span class="sg-table__detail">Within 15 miles of 24060</span><span class="sg-table__price">$45 flat</span>
+        </div>
+        <div class="sg-table__row" style="grid-template-columns:1.3fr 1fr 170px">
+          <span class="sg-table__label">Travel — beyond</span><span class="sg-table__detail">Each additional 10 miles</span><span class="sg-table__price">+$15</span>
+        </div>
+        <div class="sg-table__row" style="grid-template-columns:1.3fr 1fr 170px">
+          <span class="sg-table__label">Parts</span><span class="sg-table__detail">Quoted before ordering</span><span class="sg-table__price">At quote</span>
+        </div>
+      </div>
+    </div>
+    <div class="sg-callout" style="margin-top:var(--space-6)">
+      <span class="sg-callout__icon sg-icon" style="width:18px;height:18px;background-color:var(--status-info-fg);-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/info.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/info.svg)"></span>
+      <div>
+        <div class="sg-callout__title">What travel looks like in practice</div>
+        <div class="sg-callout__body">Blacksburg, Christiansburg and Radford fall inside the $45 flat zone. Roanoke, Salem, Pulaski and Floyd sit beyond it, adding $15 per additional 10 miles.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sg-section sg-section--tight">
+  <div class="sg-section__inner sg-grid-2" style="align-items:center">
+    <div class="sg-photo" style="height:260px">
+      <img src="assets/img/logomark-white.png" alt="">
+      <span>Photo — van interior, parts drawers</span>
+    </div>
+    <div>
+      <div class="sg-eyebrow">On the van</div>
+      <h2 class="sg-h3" style="margin-top:6px">Most repairs finish on the first visit</h2>
+      <p style="font-size:var(--size-body);color:var(--text-muted)">Gaskets, screens, solenoids, pump heads, pressurestats, common burr sets and filtration ride with us. If a part has to be ordered, you get the lead time and the price before we place it.</p>
+      <a href="book.html" class="sg-btn sg-btn--accent" style="margin-top:var(--space-4)">
+        Book a visit
+        <span class="sg-icon" style="width:16px;height:16px;-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/arrow-right.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/arrow-right.svg)"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="sg-footer">
+  <div class="sg-footer__inner">
+    <div class="sg-footer__grid">
+      <div><img class="sg-footer__logo" src="assets/img/logo-stacked-tag-white.png" alt="Steady Ground Coffee Service and Skilling" style="height:112px;width:auto;display:block"></div>
+      <div>
+        <div class="sg-eyebrow sg-footer__title">Contact</div>
+        <div class="sg-footer__lines">
+          <span>717 Lee St, Apt 4</span>
+          <span>Blacksburg, VA 24060</span>
+          <span><a href="mailto:alex@steadyground.co">alex@steadyground.co</a></span>
+          <span class="sg-footer__mono"><a href="tel:+12069929405">(206) 992-9405</a></span>
+        </div>
+      </div>
+      <div>
+        <div class="sg-eyebrow sg-footer__title">Hours of operation</div>
+        <div class="sg-footer__lines">
+          <span>By appointment only</span>
+          <span>Monday – Friday</span>
+          <span class="sg-footer__mono">9am – 5pm</span>
+        </div>
+      </div>
+    </div>
+    <div class="sg-footer__meta">
+      <span>© 2026 Steady Ground Coffee Service and Skilling</span>
+      <span>Mobile coffee tech service · New River Valley &amp; Southwest Virginia</span>
+    </div>
   </div>
 </footer>
 

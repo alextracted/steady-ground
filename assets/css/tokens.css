@@ -1,0 +1,183 @@
+/* Steady Ground design tokens — copied from the Claude Design system export (2026-09-07). */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+:root{
+  /* ---- Brand base ---- */
+  --sg-black:#000000;
+  --sg-white:#FFFFFF;
+  --sg-blue:#008CE4;
+  --sg-taupe:#B89E97;
+  --sg-blush:#DECCCC;
+
+  /* ---- Blue ramp ---- */
+  --blue-50:#ECF6FE;
+  --blue-100:#CDE9FC;
+  --blue-200:#9AD2F7;
+  --blue-300:#4FB0F0;
+  --blue-400:#008CE4;
+  --blue-500:#007AC7;
+  --blue-600:#0062A0;
+  --blue-700:#004A79;
+  --blue-800:#003454;
+
+  /* ---- Warm neutral ramp ---- */
+  --ink-1000:#000000;
+  --ink-900:#141212;
+  --ink-800:#231F1F;
+  --ink-700:#3A3433;
+  --ink-600:#554C4A;
+  --ink-500:#736765;
+  --ink-400:#948682;
+  --ink-300:#B89E97;
+  --ink-200:#DECCCC;
+  --ink-100:#EFE6E5;
+  --ink-50:#F8F4F3;
+  --ink-0:#FFFFFF;
+
+  /* ---- Status ---- */
+  --green-500:#0F8A5F;
+  --green-100:#DBF0E7;
+  --amber-500:#B5741A;
+  --amber-100:#F7EBD9;
+  --red-500:#C0392B;
+  --red-100:#F8E3E0;
+
+  /* ---- Typography ---- */
+  --font-display:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-text:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --weight-regular:400;
+  --weight-medium:500;
+  --weight-semibold:600;
+  --weight-bold:700;
+  --weight-black:900;
+
+  --size-display-1:72px;
+  --size-display-2:56px;
+  --size-display-3:44px;
+  --size-h1:34px;
+  --size-h2:27px;
+  --size-h3:21px;
+  --size-h4:18px;
+  --size-body-lg:18px;
+  --size-body:16px;
+  --size-body-sm:14px;
+  --size-caption:13px;
+  --size-micro:11px;
+
+  --leading-tight:0.92;
+  --leading-snug:1.1;
+  --leading-heading:1.2;
+  --leading-body:1.55;
+  --leading-loose:1.7;
+
+  --tracking-display:-0.03em;
+  --tracking-heading:-0.015em;
+  --tracking-body:0em;
+  --tracking-label:0.06em;
+  --tracking-eyebrow:0.14em;
+
+  /* ---- Spacing ---- */
+  --space-0:0px;
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:20px;
+  --space-6:24px;
+  --space-7:32px;
+  --space-8:40px;
+  --space-9:48px;
+  --space-10:64px;
+  --space-11:80px;
+  --space-12:96px;
+  --space-13:128px;
+
+  --gutter-page:24px;
+  --gutter-page-lg:48px;
+  --container-max:1200px;
+  --container-narrow:720px;
+  --section-y:96px;
+  --section-y-sm:56px;
+
+  /* ---- Radius ---- */
+  --radius-0:0px;
+  --radius-sm:2px;
+  --radius-md:4px;
+  --radius-lg:8px;
+  --radius-pill:999px;
+  --radius-circle:50%;
+
+  --border-hairline:1px;
+  --border-strong:2px;
+  --border-heavy:3px;
+
+  /* ---- Elevation ---- */
+  --shadow-none:none;
+  --shadow-hairline:0 0 0 1px rgba(0,0,0,0.12);
+  --shadow-sm:0 1px 2px rgba(0,0,0,0.10);
+  --shadow-md:0 4px 12px rgba(0,0,0,0.10);
+  --shadow-lg:0 12px 32px rgba(0,0,0,0.14);
+  --shadow-focus:0 0 0 3px rgba(0,140,228,0.35);
+  --shadow-inset-press:inset 0 2px 0 rgba(0,0,0,0.16);
+
+  /* ---- Motion ---- */
+  --dur-instant:80ms;
+  --dur-fast:120ms;
+  --dur-base:180ms;
+  --dur-slow:280ms;
+  --ease-standard:cubic-bezier(0.2,0,0,1);
+  --ease-out:cubic-bezier(0.16,1,0.3,1);
+  --ease-in-out:cubic-bezier(0.4,0,0.2,1);
+
+  /* ---- Semantic ---- */
+  --text-strong:var(--ink-1000);
+  --text-body:var(--ink-800);
+  --text-muted:var(--ink-600);
+  --text-subtle:var(--ink-500);
+  --text-inverse:var(--ink-0);
+  --text-link:var(--blue-500);
+  --text-link-hover:var(--blue-700);
+  --text-on-accent:var(--ink-0);
+
+  --surface-page:var(--ink-0);
+  --surface-card:var(--ink-0);
+  --surface-sunken:var(--ink-50);
+  --surface-muted:var(--ink-100);
+  --surface-warm:var(--ink-200);
+  --surface-inverse:var(--ink-1000);
+  --surface-accent:var(--blue-400);
+  --surface-accent-soft:var(--blue-50);
+
+  --border-subtle:var(--ink-200);
+  --border-default:var(--ink-300);
+  --border-strong-color:var(--ink-1000);
+  --border-accent:var(--blue-400);
+
+  --action-primary:var(--ink-1000);
+  --action-primary-hover:var(--ink-800);
+  --action-accent:var(--blue-400);
+  --action-accent-hover:var(--blue-500);
+  --action-accent-press:var(--blue-600);
+  --focus-ring:var(--blue-400);
+
+  --status-ok-fg:var(--green-500);
+  --status-ok-bg:var(--green-100);
+  --status-warn-fg:var(--amber-500);
+  --status-warn-bg:var(--amber-100);
+  --status-down-fg:var(--red-500);
+  --status-down-bg:var(--red-100);
+  --status-info-fg:var(--blue-600);
+  --status-info-bg:var(--blue-50);
+}
+
+/* ---- Base ---- */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:var(--font-text);font-size:var(--size-body);line-height:var(--leading-body);color:var(--text-body);background:var(--surface-page);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-display);color:var(--text-strong);margin:0;line-height:var(--leading-heading);letter-spacing:var(--tracking-heading)}
+a{color:var(--text-link);text-decoration:none}
+a:hover{color:var(--text-link-hover);text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
+::selection{background:var(--blue-100);color:var(--ink-1000)}
+.sg-eyebrow{font-family:var(--font-mono);font-size:var(--size-micro);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-subtle)}
