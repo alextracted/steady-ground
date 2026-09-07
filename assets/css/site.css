@@ -115,6 +115,8 @@
 .sg-photo{position:relative;border-radius:var(--radius-md);background:var(--ink-900);overflow:hidden;display:flex;align-items:center;justify-content:center}
 .sg-photo img{height:58%;width:auto;opacity:0.08}
 .sg-photo span{position:absolute;bottom:12px;left:14px;font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.45)}
+.sg-photo--real{background:var(--ink-900)}
+.sg-photo--real img{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;opacity:1}
 
 /* ---------- forms ---------- */
 .sg-field{display:flex;flex-direction:column;gap:6px}
