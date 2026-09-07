@@ -88,7 +88,7 @@ function sgShowToast(message, detail, tone) {
         if (response.ok) {
           form.reset();
           tabs[0].click();
-          sgShowToast("Request sent", "We'll call back to confirm the window.", "ok");
+          sgShowToast("Request sent", "We got it from here! Our service manager will review your request and respond shortly.", "ok");
         } else {
           return response.json().then(function (body) {
             var msg = body && body.errors ? body.errors.map(function (er) { return er.message; }).join(", ") : "Something went wrong.";
