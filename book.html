@@ -43,8 +43,10 @@
 
 <section class="sg-section sg-section--tight">
   <div class="sg-section__inner">
-    <form id="bookForm" style="max-width:720px;display:flex;flex-direction:column;gap:var(--space-5)">
+    <form id="bookForm" action="https://formspree.io/f/xoeqkyka" method="POST" style="max-width:720px;display:flex;flex-direction:column;gap:var(--space-5)">
       <input type="hidden" id="bookKind" name="kind" value="service">
+      <input type="hidden" id="bookSubject" name="_subject" value="Steady Ground — Service call request">
+      <input type="hidden" name="_format" value="plain">
 
       <div>
         <div class="sg-group-label">What do you need?</div>
@@ -140,7 +142,7 @@
         </button>
         <a href="index.html" class="sg-btn sg-btn--ghost sg-btn--lg">Cancel</a>
       </div>
-      <p style="font-size:var(--size-caption);color:var(--text-subtle);margin:0">Submitting opens your email app with this request pre-filled to alex@steadyground.co — just hit send from there.</p>
+      <p style="font-size:var(--size-caption);color:var(--text-subtle);margin:0">Submitting sends this request straight to Steady Ground — no email app needed.</p>
     </form>
   </div>
 </section>

@@ -10,9 +10,22 @@
 })();
 
 // Toast helper
-function sgShowToast(message, detail) {
+var SG_TOAST_ICONS = {
+  ok: { icon: "circle-check", color: "#0F8A5F" },
+  down: { icon: "triangle-alert", color: "#C0392B" },
+  info: { icon: "info", color: "#4FB0F0" },
+};
+function sgShowToast(message, detail, tone) {
   var toast = document.getElementById("sgToast");
   if (!toast) return;
+  var t = SG_TOAST_ICONS[tone] || SG_TOAST_ICONS.info;
+  var iconEl = toast.querySelector(".sg-toast__icon");
+  if (iconEl) {
+    var url = "https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/" + t.icon + ".svg";
+    iconEl.style.webkitMaskImage = "url(" + url + ")";
+    iconEl.style.maskImage = "url(" + url + ")";
+    iconEl.style.backgroundColor = t.color;
+  }
   toast.querySelector(".sg-toast__message").textContent = message;
   toast.querySelector(".sg-toast__detail").textContent = detail || "";
   toast.classList.add("is-visible");
@@ -28,7 +41,7 @@ function sgShowToast(message, detail) {
   });
 })();
 
-// Booking form: service/skilling tab switch + mailto submission
+// Booking form: service/skilling tab switch + Formspree submission
 (function () {
   var form = document.getElementById("bookForm");
   if (!form) return;
@@ -37,6 +50,8 @@ function sgShowToast(message, detail) {
   var servicePanel = document.getElementById("panel-service");
   var skillingPanel = document.getElementById("panel-skilling");
   var kindInput = document.getElementById("bookKind");
+  var subjectInput = document.getElementById("bookSubject");
+  var submitBtn = form.querySelector('button[type="submit"]');
 
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {
@@ -56,33 +71,38 @@ function sgShowToast(message, detail) {
     e.preventDefault();
     var data = new FormData(form);
     var kind = data.get("kind");
-    var lines = [];
-    lines.push("Request type: " + (kind === "skilling" ? "Skilling session" : "Service call"));
-    lines.push("Name: " + data.get("firstName") + " " + data.get("lastName"));
-    lines.push("Email: " + data.get("email"));
-    lines.push("Phone: " + data.get("phone"));
-    lines.push("Equipment make & model: " + (data.get("equipment") || "(not provided)"));
 
-    if (kind === "skilling") {
-      var pkgLabel = data.get("package") === "p2" ? "Extended Session — $200 + travel (2 hours, 3–6 people)" : "Standard Session — $130 + travel (90 minutes, 1–2 people)";
-      lines.push("Package: " + pkgLabel);
-      lines.push("");
-      lines.push("What the session should cover:");
-      lines.push(data.get("skillingDetails") || "");
-    } else {
-      var typeLabel = data.get("serviceType") === "build" ? "New Build-outs and Installs (consultation)" : "Field Service and Repair";
-      lines.push("Service type: " + typeLabel);
-      lines.push("");
-      lines.push("What's happening:");
-      lines.push(data.get("serviceDetails") || "");
-    }
+    subjectInput.value = "Steady Ground — " + (kind === "skilling" ? "Skilling session request" : "Service call request") + " from " + data.get("firstName") + " " + data.get("lastName");
+    data.set("_subject", subjectInput.value);
 
-    var subject = "Steady Ground — " + (kind === "skilling" ? "Skilling session request" : "Service call request") + " from " + data.get("firstName") + " " + data.get("lastName");
-    var mailto = "mailto:alex@steadyground.co"
-      + "?subject=" + encodeURIComponent(subject)
-      + "&body=" + encodeURIComponent(lines.join("\n"));
+    var originalLabel = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = "0.6";
 
-    window.location.href = mailto;
-    sgShowToast("Opening your email app…", "Review the pre-filled message, then hit send from your email app to reach us.");
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    })
+      .then(function (response) {
+        if (response.ok) {
+          form.reset();
+          tabs[0].click();
+          sgShowToast("Request sent", "We'll call back to confirm the window.", "ok");
+        } else {
+          return response.json().then(function (body) {
+            var msg = body && body.errors ? body.errors.map(function (er) { return er.message; }).join(", ") : "Something went wrong.";
+            throw new Error(msg);
+          });
+        }
+      })
+      .catch(function () {
+        sgShowToast("Couldn't send that request", "Please call or email us directly at (206) 992-9405 / alex@steadyground.co.", "down");
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = "";
+        submitBtn.innerHTML = originalLabel;
+      });
   });
 })();
