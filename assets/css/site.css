@@ -3,7 +3,7 @@
 /* ---------- layout ---------- */
 .sg-header{position:sticky;top:0;z-index:30;background:var(--surface-page);border-bottom:1px solid var(--border-subtle)}
 .sg-header__inner{max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter-page-lg);height:76px;display:flex;align-items:center;gap:var(--space-8)}
-.sg-header__logo img{height:46px;width:auto;display:block}
+.sg-header__logo img{height:58px;width:auto;display:block}
 .sg-header__nav{display:flex;gap:var(--space-6);margin-left:auto}
 .sg-header__link{font-size:var(--size-body-sm);font-weight:var(--weight-bold);letter-spacing:var(--tracking-label);text-transform:uppercase;text-decoration:none;color:var(--text-muted);border-bottom:2px solid transparent;padding-bottom:2px}
 .sg-header__link:hover{color:var(--text-strong);text-decoration:none}
