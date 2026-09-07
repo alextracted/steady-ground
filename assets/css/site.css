@@ -157,7 +157,7 @@
   .sg-header__nav.is-open{display:flex}
   .sg-header__nav .sg-header__link{padding:14px var(--gutter-page-lg);border-bottom:1px solid var(--border-subtle)}
   .sg-header__menu-btn{display:inline-flex}
-  .sg-header__phone span{display:none}
+  .sg-header__phone span:not(.sg-icon){display:none}
   .sg-hero__grid,.sg-grid-2,.sg-footer__grid,.sg-about-grid{grid-template-columns:1fr !important}
   .sg-grid-3{grid-template-columns:1fr 1fr}
   .sg-table--rates .sg-table__head,.sg-table--rates .sg-table__row,.sg-table--coverage .sg-table__head,.sg-table--coverage .sg-table__row{grid-template-columns:1fr}
