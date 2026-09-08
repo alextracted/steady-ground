@@ -97,7 +97,7 @@ function sgShowToast(message, detail, tone) {
         }
       })
       .catch(function () {
-        sgShowToast("Couldn't send that request", "Please call or email us directly at (206) 992-9405 / alex@steadyground.co.", "down");
+        sgShowToast("Couldn't send that request", "Please call or email us directly at (206) 992-9405 / service@steadyground.co.", "down");
       })
       .finally(function () {
         submitBtn.disabled = false;
