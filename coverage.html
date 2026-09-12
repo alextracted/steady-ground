@@ -9,6 +9,7 @@
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
 <link rel="icon" href="assets/img/favicon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/img/favicon-192.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha384-c6Rcwz4e4CITMbu/NBmnNS8yN2sC3cUElMEMfP3vqqKFp7GOYaaBBCqmaWBjmkjb" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/site.css">
 <script type="application/ld+json">
@@ -87,23 +88,12 @@
 
 <section class="sg-section sg-section--tight">
   <div class="sg-section__inner">
-    <div class="sg-table sg-table--coverage">
-      <div class="sg-table__head"><span>Service Area</span><span>Cities</span><span>Travel Fee</span></div>
-      <div class="sg-table__row">
-        <span class="sg-table__label">Within 15 miles of Blacksburg</span>
-        <span class="sg-table__detail">Blacksburg · Christiansburg · Radford</span>
-        <span class="sg-table__price sg-table__price--sm">$50 / hr · 15-minute minimum</span>
+    <div class="sg-map-window">
+      <div class="sg-map-window__bar">
+        <img class="sg-map-window__logo" src="assets/img/favicon-192.png" alt="">
+        <h2 class="sg-map-window__title">Defined Field Service Area: Steady Ground Coffee Service</h2>
       </div>
-      <div class="sg-table__row">
-        <span class="sg-table__label">Beyond 15 miles</span>
-        <span class="sg-table__detail">Salem · Roanoke · Pulaski · Floyd · Wytheville</span>
-        <span class="sg-table__price sg-table__price--sm">$50 / hr · outbound trip only</span>
-      </div>
-      <div class="sg-table__row">
-        <span class="sg-table__label">Out to 3 hours</span>
-        <span class="sg-table__detail">Charlottesville and anywhere else within a 3-hour drive</span>
-        <span class="sg-table__price sg-table__price--sm">$50 / hr · outbound trip only</span>
-      </div>
+      <div id="serviceMap" class="sg-map" role="img" aria-label="Map of the Steady Ground field service area: everywhere within a 3-hour drive of Blacksburg, Virginia, including Roanoke and Charlottesville, Virginia; Charleston, West Virginia; Johnson City, Tennessee; and Winston-Salem, Greensboro and Charlotte, North Carolina."></div>
     </div>
     <div class="sg-callout" style="margin-top:var(--space-6)">
       <span class="sg-callout__icon sg-icon" style="width:18px;height:18px;background-color:var(--status-info-fg);-webkit-mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/info.svg);mask-image:url(https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/info.svg)"></span>
@@ -190,6 +180,8 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha384-NElt3Op+9NBMCYaef5HxeJmU4Xeard/Lku8ek6hoPTvYkQPh3zLIrJP7KiRocsxO" crossorigin="anonymous"></script>
+<script src="assets/js/coverage-map.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
