@@ -181,6 +181,7 @@
 @media (max-width:600px){
   .sg-grid-3{grid-template-columns:1fr}
   .sg-section__inner{padding:0 var(--gutter-page)}
+  .sg-section--hero{padding-top:48px}
   .sg-h1{font-size:40px}
   .sg-h1--page{font-size:32px}
   .sg-header__inner{padding:0 var(--gutter-page);gap:var(--space-3)}
