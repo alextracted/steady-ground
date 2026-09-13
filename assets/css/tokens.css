@@ -139,7 +139,7 @@
   --text-inverse:var(--ink-0);
   --text-link:var(--blue-500);
   --text-link-hover:var(--blue-700);
-  --text-on-accent:var(--ink-0);
+  --text-on-accent:var(--ink-1000);
 
   --surface-page:var(--ink-0);
   --surface-card:var(--ink-0);
