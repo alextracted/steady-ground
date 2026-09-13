@@ -86,20 +86,20 @@
   --space-4:16px;
   --space-5:20px;
   --space-6:24px;
-  --space-7:32px;
-  --space-8:40px;
-  --space-9:48px;
-  --space-10:64px;
-  --space-11:80px;
-  --space-12:96px;
-  --space-13:128px;
+  --space-7:29px;
+  --space-8:35px;
+  --space-9:42px;
+  --space-10:54px;
+  --space-11:68px;
+  --space-12:80px;
+  --space-13:106px;
 
   --gutter-page:24px;
   --gutter-page-lg:48px;
   --container-max:1200px;
   --container-narrow:720px;
-  --section-y:96px;
-  --section-y-sm:56px;
+  --section-y:80px;
+  --section-y-sm:50px;
 
   /* ---- Radius ---- */
   --radius-0:0px;
@@ -170,21 +170,6 @@
   --status-down-bg:var(--red-100);
   --status-info-fg:var(--blue-600);
   --status-info-bg:var(--blue-50);
-}
-
-/* ---- Phone spacing: larger layout gaps shrink more, smaller ones less ---- */
-@media (max-width:600px){
-  :root{
-    --space-7:29px;
-    --space-8:35px;
-    --space-9:42px;
-    --space-10:54px;
-    --space-11:68px;
-    --space-12:80px;
-    --space-13:106px;
-    --section-y:80px;
-    --section-y-sm:50px;
-  }
 }
 
 /* ---- Base ---- */
