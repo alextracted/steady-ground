@@ -198,3 +198,6 @@
   .sg-header__logo img{height:42px}
   .sg-card--pad-7{padding:var(--space-4)}
 }
+.sg-footer__social{display:inline-block;margin-top:6px;line-height:0}
+.sg-footer__social img{display:block;width:24px;height:24px}
+.sg-footer__social:hover img{filter:brightness(0) invert(1)}
